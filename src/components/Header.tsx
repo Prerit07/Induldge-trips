@@ -1,128 +1,58 @@
-import * as React from "react";
-import MenuIcon from "@mui/icons-material/Menu";
+import React, { useState } from "react";
 import {
   AppBar,
-  Box,
-  CssBaseline,
-  Divider,
-  Drawer,
-  IconButton,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
+  Button,
+  Tab,
+  Tabs,
   Toolbar,
   Typography,
-  Button,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
-
-interface Props {
-  window?: () => Window;
-}
-
-const drawerWidth = 240;
-const navItems = ["Home", "Holidays", "Honemoon Packages", "Visa"];
-
-export default function Header(props: Props) {
-  const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-
-  const handleDrawerToggle = () => {
-    setMobileOpen((prevState) => !prevState);
-  };
-
-  const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center", backgroundColor: "black", color: "#fff" }}>
-      <Box
-              component="img"
-              sx={{
-                height: 100,
-                width: 200,
-              }}
-              alt="logo"
-              src="src/assets/indulgeLogo.png"
-            />
-      <Divider />
-      <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
-
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
+import ConnectingAirportsIcon from '@mui/icons-material/ConnectingAirports';
+import DrawerComp from "../components/Drawer";
+const Header = () => {
+  const [value, setValue] = useState();
+  const theme = useTheme();
+  const isMatch = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <Box sx={{ display: "flex" }}>
-      <CssBaseline />
-      <AppBar component="nav" sx={{ boxShadow: "20", backgroundColor: "#000"}}>
+    <React.Fragment>
+      <AppBar sx={{ background: "#fff" }}>
         <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
-            <Box
-              component="img"
-              sx={{
-                height: 150,
-                width: 350,
-                maxHeight: { xs: 233, md: 167 },
-                maxWidth: { xs: 350, md: 250 },
-              }}
-              alt="logo"
-              src="src/assets/indulgeLogo.png"
-            />
-          </Typography>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff", paddingRight: "50px" }}>
-                <Typography
-                  sx={{ fontSize: "20px", fontVariant: "all-small-caps" }}
-                >
-                  {item}
-                </Typography>
+          <ConnectingAirportsIcon sx={{ transform: "scale(2)", color:"#000"}} />
+          {isMatch ? (
+            <>
+              <Typography sx={{ fontSize: "2rem", paddingLeft: "10%", color:"#000" }}>
+                Indulge
+              </Typography>
+              <DrawerComp />
+            </>
+          ) : (
+            <>
+              <Tabs
+                sx={{ marginLeft: "auto" , color:"#000"}}
+                indicatorColor="secondary"
+                textColor="inherit"
+                value={value}
+                
+                onChange={(e, value) => setValue(value)}
+              >
+                <Tab label="Home" />
+                <Tab label="Honemoon Packages" />
+                <Tab label="Holidays" />
+                <Tab label="Visa" />
+              </Tabs>
+              <Button sx={{ marginLeft: "auto", color:"#fff"}} variant="contained">
+                Contact
               </Button>
-            ))}
-          </Box>
+              
+            </>
+          )}
         </Toolbar>
       </AppBar>
-      <nav>
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: "block", sm: "none" },
-            color: "#000",
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth,
-            },
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </nav>
-    </Box>
+    </React.Fragment>
   );
-}
+};
+
+export default Header;
