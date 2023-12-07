@@ -5,11 +5,9 @@ import {
   Tab,
   Tabs,
   Toolbar,
-  Typography,
   useMediaQuery,
-  useTheme,
+  useTheme
 } from "@mui/material";
-import ConnectingAirportsIcon from '@mui/icons-material/ConnectingAirports';
 import DrawerComp from "../components/Drawer";
 const Header = () => {
   const [value, setValue] = useState();
@@ -20,30 +18,28 @@ const Header = () => {
     <React.Fragment>
       <AppBar sx={{ background: "#fff" }}>
         <Toolbar>
-          <ConnectingAirportsIcon sx={{ transform: "scale(2)", color:"#000"}} />
+          <img src="src/assets/LogoImage.jpeg" alt="image logo" width={200} height={50}></img>
           {isMatch ? (
             <>
-              <Typography sx={{ fontSize: "2rem", paddingLeft: "10%", color:"#000" }}>
-                Indulge
-              </Typography>
               <DrawerComp />
             </>
           ) : (
             <>
               <Tabs
-                sx={{ marginLeft: "auto" , color:"#000"}}
+                sx={{ margin: "auto" , color:"#000"}}
                 indicatorColor="secondary"
-                textColor="inherit"
+                textColor="primary"
                 value={value}
-                
                 onChange={(e, value) => setValue(value)}
               >
-                <Tab label="Home" />
-                <Tab label="Honemoon Packages" />
-                <Tab label="Holidays" />
-                <Tab label="Visa" />
+                <Tab sx={{color:"#100D37", '&:hover':{borderBottom: "2px solid #B971F0"}}} label="Holidays" />
+                <Tab sx={{color:"#100D37", '&:hover':{borderBottom: "2px solid #B971F0"}}} label="Flight" />
+                <Tab sx={{color:"#100D37", '&:hover':{borderBottom: "2px solid #B971F0"}}} label="Hotel" />
+                <Tab sx={{color:"#100D37", '&:hover':{borderBottom: "2px solid #B971F0"}}} label="Honeymoon Packages" />
+                <Tab sx={{color:"#100D37", '&:hover':{borderBottom: "2px solid #B971F0"}}} label="Visa" />
+                <Tab sx={{color:"#100D37", '&:hover':{borderBottom: "2px solid #B971F0"}}} label="About us" />
               </Tabs>
-              <Button sx={{ marginLeft: "auto", color:"#fff"}} variant="contained">
+              <Button sx={{ marginLeft: "auto", color:"#fff", backgroundColor:"#B971F0"}} variant="contained">
                 Contact
               </Button>
               
