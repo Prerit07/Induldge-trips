@@ -3,48 +3,48 @@
         "id": 1,
         "title": "Destination 1",
         "description": "Make your trip with Indulge and get exclusive and attractive offers!!",
-        "image": "src/assets/indulgeLogo.png"
+        "image": "src/assets/img1.jpeg"
     },
     {
         "id": 2,
         "title": "Destination 2",
         "description": "Make your trip with Indulge and get exclusive and attractive offers!!",
-        "image": "src/assets/indulgeLogo.png"
+        "image": "src/assets/img2.jpeg"
     },
     {
         "id": 3,
         "title": "Destination 3",
         "description": "Make your trip with Indulge and get exclusive and attractive offers!!",
-        "image": "src/assets/indulgeLogo.png"
+        "image": "src/assets/img3.jpeg"
     },
     {
         "id": 4,
         "title": "Destination 4",
         "description": "Make your trip with Indulge and get exclusive and attractive offers!!",
-        "image": "src/assets/indulgeLogo.png"
+        "image": "src/assets/img4.jpeg"
     },
     {
         "id": 5,
         "title": "Destination 5",
         "description": "Make your trip with Indulge and get exclusive and attractive offers!!",
-        "image": "src/assets/indulgeLogo.png"
+        "image": "src/assets/img5.jpeg"
     },
     {
         "id": 6,
         "title": "Destination 6",
         "description": "Make your trip with Indulge and get exclusive and attractive offers!!",
-        "image": "src/assets/indulgeLogo.png"
+        "image": "src/assets/img1.jpeg"
     },
     {
         "id": 7,
         "title": "Destination 7",
         "description": "Make your trip with Indulge and get exclusive and attractive offers!!",
-        "image": "src/assets/indulgeLogo.png"
+        "image": "src/assets/img2.jpeg"
     },
     {
         "id": 8,
         "title": "Destination 8",
         "description": "Make your trip with Indulge and get exclusive and attractive offers!!",
-        "image": "src/assets/indulgeLogo.png"
+        "image": "src/assets/img3.jpeg"
     }
 ]
