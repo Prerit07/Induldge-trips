@@ -26,7 +26,7 @@ const TopDestinations = () => {
         <Typography
           variant="h4"
           align="center"
-          sx={{ color: "#fff", marginTop: "50px", marginBottom: "15px" }}
+          sx={{ color: "#fff", marginTop: "150px", marginBottom: "15px" }}
         >
           Top Destinations
         </Typography>
