@@ -18,7 +18,7 @@ const Header = () => {
     <React.Fragment>
       <AppBar sx={{ background: "#fff" }}>
         <Toolbar>
-          <img src="src/assets/LogoImage.jpeg" alt="image logo" width={200} height={50}></img>
+          <img src="src/assets/indulge_trips_logo.png" alt="image logo" width={200} height={150}></img>
           {isMatch ? (
             <>
               <DrawerComp />
@@ -39,7 +39,7 @@ const Header = () => {
                 <Tab sx={{color:"#100D37", '&:hover':{borderBottom: "2px solid #B971F0"}}} label="Visa" />
                 <Tab sx={{color:"#100D37", '&:hover':{borderBottom: "2px solid #B971F0"}}} label="About us" />
               </Tabs>
-              <Button sx={{ marginLeft: "auto", color:"#fff", backgroundColor:"#B971F0"}} variant="contained">
+              <Button sx={{ marginLeft: "auto", color:"#fff", backgroundColor:"#1b959a"}} variant="contained">
                 Contact
               </Button>
               
