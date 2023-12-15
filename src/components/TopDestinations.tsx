@@ -41,12 +41,12 @@ const TopDestinations = () => {
             <>
               <Paper
                 sx={{
-                  p: 10,
+                  p: 4,
                   margin: "auto",
-                  maxWidth: 900,
+                  width: "100%",
                   flexGrow: 1,
                   boxShadow: 10,
-                  marginBottom: 5,
+                  marginBottom: 5
                 }}
               >
                 <Grid container spacing={2}>
@@ -90,28 +90,26 @@ const TopDestinations = () => {
                         >
                           {output.title}
                         </Typography>
-                        <Divider>
+                        {/* <Divider>
                           <Chip
                             sx={{
-                              backgroundColor: "#B971F0",
+                              backgroundColor: "#1b959a",
                               color: "#fff",
                               fontWeight: "600",
                             }}
                             label="4 Nights / 5 Days"
                           />
-                        </Divider>
+                        </Divider> */}
                       </Grid>
                     </Grid>
-                    <Grid item>
+                    <Grid item sx={{display: "flex", flexDirection: "column"}}>
                       <TabPanel />
+                      <IconsStack />
                     </Grid>
                   </Grid>
-                  <IconsStack />
+                  <StackComponent />
                 </Grid>
               </Paper>
-              <div>
-                <StackComponent />
-              </div>
             </>
           ))}
         </Grid>

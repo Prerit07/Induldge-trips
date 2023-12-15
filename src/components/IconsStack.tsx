@@ -10,7 +10,7 @@ const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: "none",
   padding: theme.spacing(1),
   textAlign: "center",
-  color: "#B971F0",
+  color: "#1b959a",
 }));
 
 export default function DividerStack() {

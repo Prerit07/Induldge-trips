@@ -22,7 +22,7 @@ function TabPanel(props: TabPanelProps) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 5 }}>
+        <Box sx={{ p: 2 }}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -62,8 +62,6 @@ export default function VerticalTabs() {
       >
         <Tab label="Hotels" {...a11yProps(0)} />
         <Tab label="Sightseeings" {...a11yProps(1)} />
-        <Tab label="Inclusion" {...a11yProps(2)} />
-        <Tab label="Exclusion" {...a11yProps(3)} />
       </Tabs>
       <TabPanel value={value} index={0}>
         Hotels Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
@@ -76,18 +74,6 @@ export default function VerticalTabs() {
         Dignissimos, sunt dolorum. Minus, quos. Exercitationem provident natus
         aspernatur nesciunt delectus quae distinctio! Earum inventore ipsam
         alias veniam, excepturi distinctio laudantium fuga.
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        Inclusion Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Doloremque officiis repudiandae accusantium, blanditiis quaerat ea
-        perspiciatis, ducimus architecto at ex deleniti cum dolorem sunt impedit
-        quos. Reprehenderit nam delectus quae!
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-        Exclusion Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-        Natus molestias corrupti non, adipisci ullam beatae voluptas dolor.
-        Voluptatibus repellat dolore, animi numquam facere non iure qui porro
-        cum inventore voluptates.
       </TabPanel>
     </Box>
   );
